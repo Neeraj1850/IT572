@@ -6,15 +6,15 @@ The Energy Calculator is an innovative tool designed to predict the energy consu
 ## Environment Setup
 To run the project, you need to set up the environment variables. Create a `.env` file in the root directory and populate it with the following values:
 
-DATABASE_USER='your-database'
-DATABASE_PASSWORD=your_password
-DATABASE_HOST=localhost
-DATABASE_PORT='port-no'
-DATABASE_NAME='database-name'
-TESSERACT_CMD='path-to-tesseract'
-MODEL_PATH='path-to-model'
-CORS_ORIGIN='cors-url'
-UNIT_COST_PER_KWH='as-per-province'
+- DATABASE_USER='your-database'
+- DATABASE_PASSWORD=your_password
+- DATABASE_HOST=localhost
+- DATABASE_PORT='port-no'
+- DATABASE_NAME='database-name'
+- TESSERACT_CMD='path-to-tesseract'
+- MODEL_PATH='path-to-model'
+- CORS_ORIGIN='cors-url'
+- UNIT_COST_PER_KWH='as-per-province'
 
 ## Data Sources
 The application leverages two main data sources for energy consumption:
@@ -37,8 +37,14 @@ Use the `IT572.ipynb` notebook to train your model. Ensure you have collected th
 Install the dependencies (if you haven't already): npm install
 
 To start the backend server:
-1. Navigate to the server directory: cd ./backend
-2. Run the server with: python server.py
+1. Navigate to the server directory:
+   '''bash
+   cd ./backend
+3. Run the server with:
+   '''bash
+   python server.py
 
 To start the frontend application:
-3. Start the application: npm start
+3. Start the application: 
+'''bash
+npm start
