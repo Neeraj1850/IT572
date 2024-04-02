@@ -11,6 +11,9 @@
 # production
 /build
 
+#model
+./backend/Model0.h5
+
 # misc
 .DS_Store
 .env
