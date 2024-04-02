@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# Energy Calculator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
+The Energy Calculator is an innovative tool designed to predict the energy consumption of household appliances simply by analyzing their pictures. Utilizing advanced image recognition and energy consumption data, this application offers users insights into their appliances' efficiency, encouraging energy conservation and helping in making informed decisions about their usage.
 
-## Available Scripts
+## Environment Setup
+To run the project, you need to set up the environment variables. Create a `.env` file in the root directory and populate it with the following values:
 
-In the project directory, you can run:
+DATABASE_USER='your-database'
+DATABASE_PASSWORD=your_password
+DATABASE_HOST=localhost
+DATABASE_PORT='port-no'
+DATABASE_NAME='database-name'
+TESSERACT_CMD='path-to-tesseract'
+MODEL_PATH='path-to-model'
+CORS_ORIGIN='cors-url'
+UNIT_COST_PER_KWH='as-per-province'
 
-### `npm start`
+## Data Sources
+The application leverages two main data sources for energy consumption:
+- **Average Energy Consumption by Appliances**: [Dataset Link](https://open.canada.ca/data/dataset/4aa13365-c077-46dd-a62b-166ffc651e6f/resource/05ab565f-fec1-469f-95ae-40ddf5032f91)
+- **Individual Appliance Energy Consumption with Model Numbers and Brand**: [Dataset Link](https://open.canada.ca/data/dataset/fbfdf946-8dd1-4830-a5c9-f8a72d8fabda)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Project Structure
+- `IT572.ipynb`: Notebook used for training the model on appliance images.
+- `server.py`: Python server file to handle backend requests.
+- `/frontend`: Directory containing the React application for the frontend interface.
+- Additional files and directories should be documented similarly, providing a brief description of their purpose and functionality.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Database Setup
+Before running the application, set up your database by creating tables for each appliance, including fields for name, brand name, and average energy consumed. Additionally, create a table to hold the average energy consumption data for all appliances.
 
-### `npm test`
+## Training the Model
+Use the `IT572.ipynb` notebook to train your model. Ensure you have collected the necessary appliance images and have set the correct path in the notebook according to the `MODEL_PATH` variable in your `.env` file.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Running the Application
+Install the dependencies (if you haven't already): npm install
 
-### `npm run build`
+To start the backend server:
+1. Navigate to the server directory: cd ./backend
+2. Run the server with: python server.py
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+To start the frontend application:
+3. Start the application: npm start
