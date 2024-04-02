@@ -37,14 +37,8 @@ Use the `IT572.ipynb` notebook to train your model. Ensure you have collected th
 Install the dependencies (if you haven't already): npm install
 
 To start the backend server:
-1. Navigate to the server directory:
-   '''bash
-   cd ./backend
-3. Run the server with:
-   '''bash
-   python server.py
+1. Navigate to the server directory: cd ./backend
+3. Run the server with: python server.py
 
 To start the frontend application:
-3. Start the application: 
-'''bash
-npm start
+3. Start the application: npm start
