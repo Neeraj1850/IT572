@@ -24,7 +24,7 @@ The application leverages two main data sources for energy consumption:
 ## Project Structure
 - `IT572.ipynb`: Notebook used for training the model on appliance images.
 - `server.py`: Python server file to handle backend requests.
-- `/frontend`: Directory containing the React application for the frontend interface.
+- `/src`: Directory containing the React application for the frontend interface.
 - Additional files and directories should be documented similarly, providing a brief description of their purpose and functionality.
 
 ## Database Setup
